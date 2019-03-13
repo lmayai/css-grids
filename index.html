@@ -12,12 +12,16 @@
         .container{
             display: grid;
             /* grid-template-columns: repeat(4, minmax(300px,1fr));  */
-            grid-template-columns: minmax(400px,1fr) 1fr 1fr 1fr; 
-            grid-template-rows: 300px 300px;
-            /* grid-template: 300px 300px / 25% 50% 25%; */
+            /* grid-template-columns: minmax(400px,1fr) 1fr 1fr 1fr;  */
+            /* grid-template-rows: 300px 300px; */
+            grid-template: repeat(3, 200px) / repeat(2,200px);
             /* column-gap: 30px; */
             /* row-gap: 100px; */
-            gap:10px 50px;
+            gap:10px;
+            height: 100vh;
+            grid-template-areas:"header header" 
+                                "left contenido" 
+                                "footer footer"
         }
         .item{
             background: lightblue;
@@ -33,28 +37,26 @@
         .item .item {
             background:yellowgreen;
         }
+        .header{
+            grid-area: header;
+        }
+        .left{
+            grid-area: left;
+        }
+        .contenido{
+            grid-area: contenido;
+        }
+        .footer{    
+            grid-area: footer;
+        }
     </style>
 </head>
 <body>
     <section class="container">
-        <div class="item">contenido #1</div>
-        <div class="item">contenido #2</div>
-        <div class="item">contenido #3</div>
-        <div class="item">
-            <div class="item">subitem #1</div>
-            <div class="item">subitem #2</div>
-            <div class="item">subitem #3</div>
-            <div class="item">subitem #4</div>
-            <div class="item">subitem #5</div>    
-        </div>
-        <div class="item">contenido #5</div>
-        <div class="item">contenido #6</div>
-        <div class="item">contenido #7</div>
-        <div class="item">contenido #8</div>
-        <div class="item">contenido #9</div>
-        <div class="item">contenido #10</div>
-        <div class="item">contenido #11</div>
-        <div class="item">contenido #12</div>
+        <div class="item header">Header</div>
+        <div class="item left">left</div>
+        <div class="item contenido">contenido</div>
+        <div class="item footer">footer</div>
     </section>
 
 </body>
