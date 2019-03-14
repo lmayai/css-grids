@@ -1,52 +1,62 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>Ejm Instagram</title>
     <style>
-        body{
+        body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
         }
-        .post{
-            cursor: pointer; /*Muestra la mano cuando este dentro del post*/
+
+        .post {
+            cursor: pointer;
+            /*Muestra la mano cuando este dentro del post*/
             position: relative;
             display: block;
             width: 300px;
         }
-        .post-image{
-            margin: 0; /*La imagen siempre tiene por defecto*/
+
+        .post-image {
+            margin: 0;
+            /*La imagen siempre tiene por defecto*/
         }
-        .post-image img{
+
+        .post-image img {
             width: 100%;
             vertical-align: top;
         }
-        .post-overlay{
-            background: rgba(0,0,0,0.4);
+
+        .post-overlay {
+            background: rgba(0, 0, 0, 0.4);
             position: absolute;
-            left:0;
-            right:0;
-            bottom:0;
-            top:0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
             display: none;
             align-items: center;
             justify-content: center;
-            color:white;
+            color: white;
             text-align: center;
         }
-        .post:hover .post-overlay{
+
+        .post:hover .post-overlay {
             display: flex;
         }
+
         .post-likes,
-        .post-comments{
-            width:80px;
-            margin:5px;
+        .post-comments {
+            width: 80px;
+            margin: 5px;
             font-weight: bold;
             text-align: center;
             display: inline-block;
         }
     </style>
 </head>
+
 <body>
     <section class="post-list">
         <a href="" class="post">
@@ -60,6 +70,62 @@
                 </p>
             </span>
         </a>
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="compu2.jpg" alt="compu">
+            </figure>
+            <span class="post-overlay">
+                <p>
+                    <span class="post-likes">10</span>
+                    <span class="post-comments">5</span>
+                </p>
+            </span>
+        </a>
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="compu3.jpg" alt="compu">
+            </figure>
+            <span class="post-overlay">
+                <p>
+                    <span class="post-likes">10</span>
+                    <span class="post-comments">5</span>
+                </p>
+            </span>
+        </a>
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="compu.jpg" alt="compu">
+            </figure>
+            <span class="post-overlay">
+                <p>
+                    <span class="post-likes">10</span>
+                    <span class="post-comments">5</span>
+                </p>
+            </span>
+        </a>
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="compu2.jpg" alt="compu">
+            </figure>
+            <span class="post-overlay">
+                <p>
+                    <span class="post-likes">10</span>
+                    <span class="post-comments">5</span>
+                </p>
+            </span>
+        </a>
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="compu3.jpg" alt="compu">
+            </figure>
+            <span class="post-overlay">
+                <p>
+                    <span class="post-likes">10</span>
+                    <span class="post-comments">5</span>
+                </p>
+            </span>
+        </a>
     </section>
 </body>
+
 </html>
