@@ -12,10 +12,10 @@
         }
         .container{
             display: grid;
-            /* grid-template-columns: repeat(4, minmax(300px,1fr));  */
-            /* grid-template-columns: minmax(400px,1fr) 1fr 1fr 1fr;  */
+            grid-template-columns: repeat(3, 1fr); 
+            grid-template-rows: repeat(4, 1fr); 
             /* grid-template-rows: 300px 300px; */
-            grid-template: 100px 1fr 150px / 200px 1fr;
+            /* grid-template: 100px 1fr 150px / 200px 1fr; */
             /* column-gap: 30px; */
             /* row-gap: 100px; */
             gap:10px;
@@ -29,35 +29,40 @@
             padding: 10px;
             border: 2px solid red;
         }
-        .item:nth-of-type(4){
+        .item:nth-of-type(1){
             background: lightgreen;
-            overflow: auto;
-            display: grid;
-            grid-template: 50px 50px 50px / 50px 50px 50px;
+            grid-column-start: 2; /*Se coloca el numero de linea que empieza*/
+            grid-column-end: 4; /*Linea donde termina*/
         }
-        .item .item {
-            background:yellowgreen;
+        .item:nth-of-type(7){
+            background:lightcoral;
+            grid-column: 2 / 4; /*IUsando una sola linea*/
         }
-        .header{
-            grid-area: header;
+        .item:nth-of-type(8){
+            background:lightcoral;
+            grid-column: 1 / span 3; /*SI se menciona la cantidad de bloques que se quieren*/
         }
-        .left{
-            grid-area: left;
+        .item:nth-of-type(9){
+            background:lightcoral;
+            grid-column: 1 / -1; /*SI se quiere que tenga todo el tamaño de columnas posibles*/
         }
-        .contenido{
-            grid-area: contenido;
-        }
-        .footer{    
-            grid-area: footer;
-        }
+        
     </style>
 </head>
 <body>
     <section class="container">
-        <div class="item header">Header</div>
-        <div class="item left">left</div>
-        <div class="item contenido">contenido</div>
-        <div class="item footer">footer</div>
+        <div class="item">item #1</div>
+        <div class="item">item #2</div>
+        <div class="item">item #3</div>
+        <div class="item">item #4</div>
+        <div class="item">item #5</div>
+        <div class="item">item #6</div>
+        <div class="item">item #7</div>
+        <div class="item">item #8</div>
+        <div class="item">item #9</div>
+        <div class="item">item #10</div>
+        <div class="item">item #11</div>
+        <div class="item">item #12</div>
     </section>
 
 </body>
