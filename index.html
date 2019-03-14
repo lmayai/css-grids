@@ -12,8 +12,8 @@
         }
         .container{
             display: grid;
-            grid-template-columns: repeat(3, 1fr); 
-            grid-template-rows: repeat(4, 1fr); 
+            grid-template-columns: repeat(7, 1fr); 
+            grid-template-rows: repeat(2, 200px); 
             /* grid-template-rows: 300px 300px; */
             /* grid-template: 100px 1fr 150px / 200px 1fr; */
             /* column-gap: 30px; */
@@ -31,21 +31,19 @@
         }
         .item:nth-of-type(1){
             background: lightgreen;
-            grid-column-start: 2; /*Se coloca el numero de linea que empieza*/
-            grid-column-end: 4; /*Linea donde termina*/
+            grid-column: 1 / span 3;
+            grid-row:1/span 2;
         }
-        .item:nth-of-type(7){
-            background:lightcoral;
-            grid-column: 2 / 4; /*IUsando una sola linea*/
+        .item:nth-of-type(2){
+            background: lightgreen;
+            grid-column: 4 / span 2;
+            grid-row: 1 / span 2;
         }
-        .item:nth-of-type(8){
-            background:lightcoral;
-            grid-column: 1 / span 3; /*SI se menciona la cantidad de bloques que se quieren*/
+        .item:nth-of-type(3){
+            background: lightgreen;
+            grid-column: 6 / span 2;
         }
-        .item:nth-of-type(9){
-            background:lightcoral;
-            grid-column: 1 / -1; /*SI se quiere que tenga todo el tamaño de columnas posibles*/
-        }
+       
         
     </style>
 </head>
@@ -56,13 +54,6 @@
         <div class="item">item #3</div>
         <div class="item">item #4</div>
         <div class="item">item #5</div>
-        <div class="item">item #6</div>
-        <div class="item">item #7</div>
-        <div class="item">item #8</div>
-        <div class="item">item #9</div>
-        <div class="item">item #10</div>
-        <div class="item">item #11</div>
-        <div class="item">item #12</div>
     </section>
 
 </body>
