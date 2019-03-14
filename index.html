@@ -12,33 +12,24 @@
         }
         .container{
             display: grid;
-            grid-template-columns:[inicio] 1fr [linea2] 1fr [linea3] 1fr [destacado-end] 1fr [linea5] 1fr [destacado2-end] 1fr [linea7] 1fr [final]; 
-            grid-template-rows: [inicio] 200px [inicio2] 200px [final]; 
-            /* grid-template-rows: 300px 300px; */
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4,1fr);
             /* grid-template: 100px 1fr 150px / 200px 1fr; */
             /* column-gap: 30px; */
             /* row-gap: 100px; */
             gap:10px;
             height: 100vh;
-            grid-auto-flow: row;
-            grid-auto-rows: 50px 200px ;
+            justify-items: center ;/**start end center stretch ;*/
+            align-items: center;
         }
+        
         .item{
             background: lightblue;
             
         }
-        .item:nth-of-type(1){
-            background: lightgreen;
-            grid-column: inicio / destacado-end;
-            grid-row: inicio / final;
-        }
-        .item:nth-of-type(2){
-            background: lightgreen;
-            grid-column: destacado-end / destacado2-end;
-            grid-row: inicio / final;
-        }
-        .item:nth-of-type(3){
-            grid-column: destacado2-end / final;
+        .item:nth-of-type(5){
+            justify-self: center ;
+            align-self: start;
         }
        
         
@@ -55,15 +46,9 @@
         <div class="item">item #7</div>
         <div class="item">item #8</div>
         <div class="item">item #9</div>
-        <div class="item">item #9</div>
-        <div class="item">item #9</div>
-        <div class="item">item #9</div>
-        <div class="item">item #9</div>
-        <div class="item">item #9</div>
-        <div class="item">item #9</div>
-        <div class="item">item #9</div>
-        <div class="item">item #9</div>
-        
+        <div class="item">item #10</div>
+        <div class="item">item #11</div>
+        <div class="item">item #12</div>
     </section>
 
 </body>
