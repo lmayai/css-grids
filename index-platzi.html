@@ -13,19 +13,41 @@
             background:#24475b;
             color: white;
             padding: 32px 15px;
+            display: grid;
+            grid-template-columns: minmax(auto,1024px);
+            justify-content: center;
         }
+        .hero-container{
+            display: grid;
+            grid-template-columns:70px 1fr 320px;
+            grid-template-areas: "badge title form"
+                                 ". description form"
+                                 ". countdown form";
+            gap:10px;
+        }   
         .title{
             font-size: 36px;
             font-weight: normal;
             margin: 0;
             display: flex;
             align-items: center;
+            grid-area:title;
+        }
+        .badge{
+            grid-area:badge;
+        }
+        .badge img{
+            max-width: 70px;
+        }
+        .description{
+            grid-area:description;
         }
         .form{
             text-align: center;
             background: rgba(255, 255,255, .9);
             padding: 1.5em;
             border-radius: 10px;
+            grid-area:form;
         }
         .form input{
             width: 100%;
@@ -36,7 +58,7 @@
             margin-bottom: 5px;
         }
         .form p{
-            font-size: 10px;
+            font-size: 30px;
             color:#3a3b3f;
             margin-bottom: 1em;
         }
@@ -51,7 +73,7 @@
             font-size: 16px;
         }
         .countdown{
-
+            grid-area: countdown;
         }
         .countdown p{
             font-size:20px;
@@ -72,31 +94,36 @@
         p {
             margin: 0;
         }
+
+        
+
     </style>
 </head>
 <body>
     <div class="hero">
-        <div class="badge">
-            <img src="badge.png" alt="">
-        </div>
-        <h1 class="title">Curso de React JS</h1>
-        <div class="description">
-            <p>React takes the description and displays the result. In particular, render returns a React element, which is a lightweight description of what to render. Most React developers use a special syntax called “JSX” which makes these structures easier to write.</p>
-        </div>
-        <form action="" class="form">
-            <p>Regístrate</p>
-            <input type="text" placeholder="Nombre" name="" id="">
-            <input type="email" placeholder="Correo" name="" id="">
-            <button type="submit">Comienza ya!</button>
-        </form>
-        <div class="countdown">
-            <p>Lanzamiento:</p>
-            <p>
-                <span>01d</span>
-                <span>10h</span>
-                <span>09m</span>
-                <span>05s</span>
-            </p>
+        <div class="hero-container">
+            <div class="badge">
+                <img src="badge.png" alt="">
+            </div>
+            <h1 class="title">Curso de React JS</h1>
+            <div class="description">
+                <p>React takes the description and displays the result. In particular, render returns a React element, which is a lightweight description of what to render. Most React developers use a special syntax called “JSX” which makes these structures easier to write.</p>
+            </div>
+            <form action="" class="form">
+                <p>Regístrate</p>
+                <input type="text" placeholder="Nombre" name="" id="">
+                <input type="email" placeholder="Correo" name="" id="">
+                <button type="submit">Comienza ya!</button>
+            </form>
+            <div class="countdown">
+                <p>Lanzamiento:</p>
+                <p>
+                    <span>01d</span>
+                    <span>10h</span>
+                    <span>09m</span>
+                    <span>05s</span>
+                </p>
+            </div>
         </div>
     </div>
 </body>
