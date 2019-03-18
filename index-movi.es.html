@@ -18,11 +18,12 @@
         }
         .hero{
             grid-area: hero;
-        }
-        .hero form{
             display: flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
             align-items:center;
+        }
+        .hero h4{
+            display: inline-block;
         }
         .hero_img_home{
             margin-left: 100px;
@@ -36,6 +37,12 @@
             border-radius: 5px;
             height:30px;
             width: 400px;
+        }
+        .hero-user{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 200px;
         }
         .bar{
             grid-area:bar;
@@ -73,12 +80,14 @@
 <body>
     <section class="container">
         <div class="hero">
+            <img class="hero_img_home" src="popcorn.png" alt="">
             <form action="">
-                <img class="hero_img_home" src="popcorn.png" alt="">
                 <input type="text" placeholder="Buscar pelicula o algo que te interese">
+            </form>
+            <div class="hero-user">
                 <h4>Leon Ci To</h4>
                 <img class="hero_img_user" src="leon.png" alt="">
-            </form>
+            </div>
         </div>
         <div class="bar">
             <p>Home</p>
