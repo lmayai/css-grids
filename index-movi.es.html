@@ -62,7 +62,7 @@
         .bar{
             grid-area:bar;
             display: grid;
-            grid-template-rows: 10% 10% 10% 70%;
+            grid-template-rows: 20% 20% 20% 40%;
             align-items: flex-end;
             background: #FD6766;
         }
@@ -72,6 +72,13 @@
             text-align: center;
             color: white;
         }   
+        .bar i{
+            display: block;
+            color: white;
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
         .movies{
             grid-area:movies;
             display:flex;
@@ -83,6 +90,11 @@
             width: 30%;
             height: 200px;
             box-sizing: border-box;
+        }
+        .movie img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
         .movie_subtitle{
             width: 100%;
@@ -104,16 +116,16 @@
             </div>
         </div>
         <div class="bar">
-            <p><i class="icon-home"></i>Home</p>
-            <p><i class="icon-trend"></i> Trending</p>
-            <p><i class="icon-like"></i>Likes</p>
-            <p><i class="icon-conf"></i>Ajustes</p>
+        <span><i class="icon-home"></i> <p>Home</p></span>
+        <span><i class="icon-trend"></i> <p>Trending</p></span>
+        <span><i class="icon-like"></i> <p>Likes</p></span>
+        <span><i class="icon-conf"></i> <p>Ajustes</p></span>
         </div>
         <div class="movies">
             <h2 class="movie_subtitle">Ahora en el cine</h2>
-            <div class="movie">Movie 1</div>
-            <div class="movie">Movie 2</div>
-            <div class="movie">Movie 3</div>
+            <div class="movie"><img src="tarzan.jpg" alt=""></div>
+            <div class="movie"><img src="tarzan.jpg" alt=""></div>
+            <div class="movie"><img src="tarzan.jpg" alt=""></div>
             <h2 class="movie_subtitle">Aclamadas</h2>
             <div class="movie">Movie 4</div>
             <div class="movie">Movie 5</div>
