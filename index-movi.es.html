@@ -12,13 +12,12 @@
             height: 100vh;
             justify-content: center;
             grid-template-columns: 150px 1fr;
-            grid-template-rows: 50px 1fr;
+            grid-template-rows: 70px 1fr;
             grid-template-areas:"hero hero"
                                  "bar movies ";
         }
         .hero{
             grid-area: hero;
-            border: 1px solid red;
         }
         .hero form{
             display: flex;
@@ -26,11 +25,17 @@
             align-items:center;
         }
         .hero_img_home{
+            margin-left: 100px;
             width: 50px;
         }
         .hero_img_user{
             width: 50px;
             border-radius: 50%;
+        }
+        .hero input{
+            border-radius: 5px;
+            height:30px;
+            width: 400px;
         }
         .bar{
             grid-area:bar;
@@ -70,7 +75,7 @@
         <div class="hero">
             <form action="">
                 <img class="hero_img_home" src="popcorn.png" alt="">
-                <input type="text" placeholder="Buscar pelicula">
+                <input type="text" placeholder="Buscar pelicula o algo que te interese">
                 <h4>Leon Ci To</h4>
                 <img class="hero_img_user" src="leon.png" alt="">
             </form>
