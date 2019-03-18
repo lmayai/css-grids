@@ -90,16 +90,28 @@
             width: 30%;
             height: 200px;
             box-sizing: border-box;
+            position: relative;
         }
         .movie img{
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
         }
         .movie_subtitle{
             width: 100%;
             height: auto;
             margin: 10px;
+        }
+        .movie-desc{
+            position: absolute;
+            background:rgba(255, 0, 0, 0.5);
+            top: 40%;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            color: white;
+            font-size: 1.3em;
+            height: 50%;
         }
     </style>
 </head>
@@ -123,11 +135,11 @@
         </div>
         <div class="movies">
             <h2 class="movie_subtitle">Ahora en el cine</h2>
-            <div class="movie"><img src="tarzan.jpg" alt=""></div>
+            <div class="movie"><img src="tarzan.jpg" alt=""><p class="movie-desc">Tarzan</p></div>
             <div class="movie"><img src="tarzan.jpg" alt=""></div>
             <div class="movie"><img src="tarzan.jpg" alt=""></div>
             <h2 class="movie_subtitle">Aclamadas</h2>
-            <div class="movie">Movie 4</div>
+            <div class="movie"></div>
             <div class="movie">Movie 5</div>
             <div class="movie">Movie 6</div>
             <h2 class="movie_subtitle">Próximamente</h2>
