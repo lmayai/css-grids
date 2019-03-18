@@ -2,17 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Movil.es</title>
+    <title>Movi.es</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <style>
         body{
             margin: 0;
+            font-family: Lato,sans-serif;
         }
         .container{
             display: grid;
             height: 100vh;
             justify-content: center;
             grid-template-columns: 150px 1fr;
-            grid-template-rows: 70px 1fr;
+            grid-template-rows: 80px 1fr;
             grid-template-areas:"hero hero"
                                  "bar movies ";
         }
@@ -24,9 +26,11 @@
         }
         .hero h4{
             display: inline-block;
+            margin-right: 50px;
+            font-size: 1.1em;
+            color: #444751;
         }
         .hero_img_home{
-            margin-left: 100px;
             width: 50px;
         }
         .hero_img_user{
@@ -36,13 +40,22 @@
         .hero input{
             border-radius: 5px;
             height:30px;
-            width: 400px;
+            width: 50vw;
+            box-shadow: none;
+            font-family: Lato,sans-serif;
+            font-size: 1em;
+            padding: 5px;
+            box-sizing: border-box;
+            border-style: solid;
+            border-color: #929292;
+            height: 40px;
         }
         .hero-user{
             display: flex;
             justify-content: center;
             align-items: center;
-            padding-left: 200px;
+            align-self: flex-end;
+            cursor: pointer;
         }
         .bar{
             grid-area:bar;
@@ -59,21 +72,20 @@
         }   
         .movies{
             grid-area:movies;
-            display:grid;
-            grid-template-rows: 20px 1fr;
-        }
-        .movies-list{
-            border: 1px solid red;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); 
-            grid-template-rows: 1fr 1fr 1fr ; 
+            display:flex;
+            flex-wrap: wrap;
             justify-content: space-evenly;
-            gap: 10px;
         }
         .movie{
             border: 1px solid lightslategray;
+            width: 30%;
+            height: 200px;
+            box-sizing: border-box;
         }
         .movie_subtitle{
+            width: 100%;
+            height: 10px;
+            margin: 10px;
         }
     </style>
 </head>
@@ -96,20 +108,18 @@
             <p>Ajustes</p>
         </div>
         <div class="movies">
-            <div>
-                <h2 class="movie_subtitle">Ahora en el cine</h2>
-            </div>
-            <div class="movies-list">
-                <div class="movie">Movie 1</div>
-                <div class="movie">Movie 2</div>
-                <div class="movie">Movie 3</div>
-                <div class="movie">Movie 4</div>
-                <div class="movie">Movie 5</div>
-                <div class="movie">Movie 6</div>
-                <div class="movie">Movie 7</div>
-                <div class="movie">Movie 1</div>
-                <div class="movie">Movie 1</div>
-            </div>
+            <p class="movie_subtitle">Ahora en el cine</p>
+            <div class="movie">Movie 1</div>
+            <div class="movie">Movie 2</div>
+            <div class="movie">Movie 3</div>
+            <p class="movie_subtitle">Aclamadas</p>
+            <div class="movie">Movie 4</div>
+            <div class="movie">Movie 5</div>
+            <div class="movie">Movie 6</div>
+            <p class="movie_subtitle">Próximamente</p>
+            <div class="movie">Movie 7</div>
+            <div class="movie">Movie 8</div>
+            <div class="movie">Movie 9</div>
         </div>
     </section>
 </body>
