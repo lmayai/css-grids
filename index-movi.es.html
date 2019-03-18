@@ -4,56 +4,64 @@
     <meta charset="UTF-8">
     <title>Movil.es</title>
     <style>
-        .body{
+        body{
             margin: 0;
         }
         .container{
             display: grid;
+            height: 100vh;
             justify-content: center;
-            grid-template-columns: 50px 1fr 1fr 1fr;
-            grid-template-areas:"hero hero hero hero"
-                                "bar movies movies movies"
-                                "bar movies movies movies"
-                                "bar movies movies movies";
-
+            grid-template-columns: 150px 1fr;
+            grid-template-rows: 50px 1fr;
+            grid-template-areas:"hero hero"
+                                 "bar movies ";
         }
         .hero{
             grid-area: hero;
-            border: 3px solid red;
+            border: 1px solid red;
         }
         .hero form{
             display: flex;
             justify-content: space-between;
             align-items:center;
         }
-        .hero img{
-            width:20px;
+        .hero_img_home{
+            width: 50px;
+        }
+        .hero_img_user{
+            width: 50px;
+            border-radius: 50%;
         }
         .bar{
             grid-area:bar;
             display: grid;
             grid-template-rows: 10% 10% 10% 70%;
             align-items: flex-end;
-            border: 3px solid red;
+            background: #FD6766;
         }
         .bar p{
-            text-align: start;
-        }
+            font-size: 18px;
+            display: block;
+            text-align: center;
+            color: white;
+        }   
         .movies{
-            border: 3px solid red;
             grid-area:movies;
+            display:grid;
+            grid-template-rows: 20px 1fr;
+        }
+        .movies-list{
+            border: 1px solid red;
             display: grid;
-            grid-template-columns: repeat(3, minmax(200px,auto)); 
-            grid-template-rows: repeat(3, minmax(200px,auto)); 
+            grid-template-columns: repeat(3, 1fr); 
+            grid-template-rows: 1fr 1fr 1fr ; 
             justify-content: space-evenly;
-            
+            gap: 10px;
         }
         .movie{
-            min-width: auto;
-            min-height: auto;
-            height: auto;
             border: 1px solid lightslategray;
-            margin: 10px;
+        }
+        .movie_subtitle{
         }
     </style>
 </head>
@@ -61,29 +69,33 @@
     <section class="container">
         <div class="hero">
             <form action="">
-                <img src="badge.png" alt="">
+                <img class="hero_img_home" src="popcorn.png" alt="">
                 <input type="text" placeholder="Buscar pelicula">
-                <p>Usuario</p>
-                <img src="badge.png" alt="">
-                <a href="">></a>
+                <h4>Leon Ci To</h4>
+                <img class="hero_img_user" src="leon.png" alt="">
             </form>
         </div>
         <div class="bar">
             <p>Home</p>
-            <p>TRending</p>
+            <p>Trending</p>
             <p>Likes</p>
             <p>Ajustes</p>
         </div>
         <div class="movies">
-            <div class="movie">Movie 1</div>
-            <div class="movie">Movie 2</div>
-            <div class="movie">Movie 3</div>
-            <div class="movie">Movie 4</div>
-            <div class="movie">Movie 5</div>
-            <div class="movie">Movie 6</div>
-            <div class="movie">Movie 7</div>
-            <div class="movie">Movie 1</div>
-            <div class="movie">Movie 1</div>
+            <div>
+                <h2 class="movie_subtitle">Ahora en el cine</h2>
+            </div>
+            <div class="movies-list">
+                <div class="movie">Movie 1</div>
+                <div class="movie">Movie 2</div>
+                <div class="movie">Movie 3</div>
+                <div class="movie">Movie 4</div>
+                <div class="movie">Movie 5</div>
+                <div class="movie">Movie 6</div>
+                <div class="movie">Movie 7</div>
+                <div class="movie">Movie 1</div>
+                <div class="movie">Movie 1</div>
+            </div>
         </div>
     </section>
 </body>
