@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>PLatzi Video EJM</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <style>
+            body{
+                margin: 0;
+                font-family: Lato,sans-serif;
+            }
+            .container{
+                margin: 0 auto;
+                height: 100vh;
+                display: grid;
+                width: 1280px;
+                grid-template-columns: 30% 35% 35%;
+                grid-template-rows: 45% 15% 40%; 
+                grid-template-areas: "playlist video video"
+                                     "playlist video-info video-info"
+                                     "playlist comments suggests";
+            }
+            .playlist{
+                grid-area: playlist;
+                border: 2px solid green; 
+            }
+            .video{
+                grid-area:video;
+                border: 2px solid green; 
+            }
+            .video-info{
+                grid-area:video-info;
+                border: 2px solid green; 
+            }
+            .comments{
+                grid-area: comments;
+                border: 2px solid green; 
+            }
+            .suggests{
+                grid-area:suggests;
+                border: 2px solid green; 
+            }
+        </style>
+    </head>
+    <body>  
+        <div class="container">
+            <div class="playlist"></div>
+            <div class="video"></div>
+            <div class="video-info"></div>
+            <div class="comments"></div>
+            <div class="suggests"></div>
+        </div>
+    </body>
+</html>
