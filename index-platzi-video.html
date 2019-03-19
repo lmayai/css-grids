@@ -8,12 +8,13 @@
             body{
                 margin: 0;
                 font-family: Lato,sans-serif;
+                
             }
             .container{
                 margin: 0 auto;
                 height: 100vh;
                 display: grid;
-                width: 1280px;
+                width: 1100px;
                 grid-template-columns: 30% 35% 35%;
                 grid-template-rows: 45% 15% 40%; 
                 grid-template-areas: "playlist video video"
@@ -22,7 +23,13 @@
             }
             .playlist{
                 grid-area: playlist;
-                border: 2px solid green; 
+                background: #1E1B35;
+                color: white;
+            }
+            .playlist strong{
+                background: -webkit-linear-gradient(#fd4747, #e6c9d1);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
             .video{
                 grid-area:video;
@@ -44,7 +51,25 @@
     </head>
     <body>  
         <div class="container">
-            <div class="playlist"></div>
+            <div class="playlist">
+                <h1>Platzi<strong>Video</strong></h1>
+                <h4>My Playlist</h4>
+                <ol>
+                    <li>Reasons to choose laptop instead Desktop</li>
+                    <li>Reasons #2</li>
+                    <li>Reasons #3</li>
+                    <li>Reasons #4</li>
+                    <li>Reasons #5</li>
+                    <li>Reasons #6</li>
+                    <li>Reasons #7</li>
+                    <li>Reasons #8</li>
+                    <li>Reasons #9</li>
+                </ol>
+                <h4>Friends Playlist</h4>
+                <ul>
+                    <li><img src="" alt="Friend1"></li>
+                </ul>
+            </div>
             <div class="video"></div>
             <div class="video-info"></div>
             <div class="comments"></div>
