@@ -12,7 +12,8 @@
             }
             .container{
                 margin: 0 auto;
-                height: 100vh;
+                min-height: 100vh;
+                max-height: auto;   
                 display: grid;
                 width: 1100px;
                 grid-template-columns: 30% 35% 35%;
@@ -25,6 +26,26 @@
                 grid-area: playlist;
                 background: #1E1B35;
                 color: white;
+                padding: 20px;
+            }
+            .playlist li{
+                display: flex;
+                margin-bottom: 10px;
+                list-style-type: none;
+                align-items: center;
+            }
+            .playlist li p{
+                display: inline-block;
+                margin-left: 5px;
+            }
+            .playlist a{
+                text-decoration: none;
+                color: inherit;
+
+            }
+            .playlist img{
+                width: 50px;
+                border-radius: 50%;
             }
             .playlist strong{
                 background: -webkit-linear-gradient(#fd4747, #e6c9d1);
@@ -55,19 +76,22 @@
                 <h1>Platzi<strong>Video</strong></h1>
                 <h4>My Playlist</h4>
                 <ol>
-                    <li>Reasons to choose laptop instead Desktop</li>
-                    <li>Reasons #2</li>
-                    <li>Reasons #3</li>
-                    <li>Reasons #4</li>
-                    <li>Reasons #5</li>
-                    <li>Reasons #6</li>
-                    <li>Reasons #7</li>
-                    <li>Reasons #8</li>
-                    <li>Reasons #9</li>
+                    <li><a href="#">Reasons to</a></li>
+                    <li><a href="#">Reasons #2</a></li>
+                    <li><a href="#">Reasons #3</a></li>
+                    <li><a href="#">Reasons #4</a></li>
+                    <li><a href="#">Reasons #5</a></li>
+                    <li><a href="#">Reasons #6</a></li>
+                    <li><a href="#">Reasons #7</a></li>
+                    <li><a href="#">Reasons #8</a></li>
+                    <li><a href="#">Reasons #9</a></li>
                 </ol>
                 <h4>Friends Playlist</h4>
                 <ul>
-                    <li><img src="" alt="Friend1"></li>
+                    <li><img src="faces/face1.png" alt="Friend1"> <p>Pepito Peréz</p></li>
+                    <li><img src="faces/face2.png" alt="Friend1"> <p>Pepito Peréz</p></li>
+                    <li><img src="faces/face3.png" alt="Friend1"> <p>Pepito Peréz</p></li>
+                    <li><img src="faces/face4.png" alt="Friend1"> <p>Pepito Peréz</p></li>
                 </ul>
             </div>
             <div class="video"></div>
