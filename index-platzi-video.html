@@ -67,6 +67,8 @@
                 justify-content: space-between;
                 padding-left: 20px; 
                 padding-right: 80px; 
+                border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+                height: auto;
             }
             .video-name,.video-views{
                 width: 100%;
@@ -79,15 +81,34 @@
             }
             .video-views{
                 font-style: italic;
-                color: rgba(0, 0, 0, 0.6)
+                color: rgba(0, 0, 0, 0.7)
+            }
+            .video-actions button{
+                border-radius: 5px;
+                border-style: solid;
+                box-sizing: border-box;
+                width: 80px;
+                height: auto;
+                padding: 5px;
+                color: white;
+                margin: 0 15px;
+            }
+            .video-add{
+                background: linear-gradient(to right, rgb(236, 50, 50), rgb(190, 23, 177) );
+            }
+            .video-share{
+                background: linear-gradient(to right, rgb(22, 114, 27), rgb(112, 136, 26) );
+            }
+            .video-save{
+                background: linear-gradient(to right, rgb(14, 110, 128), rgb(190, 23, 177) );
             }
             .comments{
                 grid-area: comments;
-                border: 2px solid green; 
+                
             }
             .suggests{
                 grid-area:suggests;
-                border: 2px solid green; 
+                border-left: 2px solid green; 
             }
         </style>
     </head>
