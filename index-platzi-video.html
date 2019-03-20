@@ -8,14 +8,12 @@
             body{
                 margin: 0;
                 font-family: Lato,sans-serif;
-                
             }
             .container{
                 margin: 0 auto;
                 min-height: 100vh;
                 max-height: auto;   
                 display: grid;
-                width: 100vw;
                 grid-template-columns: 24% 38% 38%;
                 grid-template-rows: 45% 15% 40%; 
                 grid-template-areas: "playlist video video"
@@ -55,6 +53,7 @@
             }
             .video{
                 grid-area:video;
+                width: auto;
             }
             .video iframe{
                 width: 100%;
@@ -69,6 +68,7 @@
                 padding-right: 80px; 
                 border-bottom: 2px solid rgba(0, 0, 0, 0.2);
                 height: auto;
+                
             }
             .video-name,.video-views{
                 width: 100%;
@@ -108,7 +108,6 @@
             }
             .suggests{
                 grid-area:suggests;
-                border-left: 2px solid green; 
             }
         </style>
     </head>
