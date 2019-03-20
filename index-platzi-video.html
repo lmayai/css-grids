@@ -92,6 +92,8 @@
                 padding: 5px;
                 color: white;
                 margin: 0 15px;
+                font-size: 1em;
+                cursor: pointer;
             }
             .video-add{
                 background: linear-gradient(to right, rgb(236, 50, 50), rgb(190, 23, 177) );
@@ -102,9 +104,28 @@
             .video-save{
                 background: linear-gradient(to right, rgb(14, 110, 128), rgb(190, 23, 177) );
             }
+            .video-tags button{
+                border-style: solid;
+                border-radius:20%;
+                padding: 3px 10px;
+                margin:0 5px;
+                vertical-align: center;
+                color: white;
+            }
+            .video-tags button:nth-child(1){
+                background: purple;
+            }
+            .video-tags button:nth-child(2){
+                background: green;
+            }
+            .video-tags button:nth-child(3){
+                background: blue;
+            }
+            .video-tags button:nth-child(4){
+                background: orangered;
+            }
             .comments{
-                grid-area: comments;
-                
+                grid-area: comments;   
             }
             .suggests{
                 grid-area:suggests;
@@ -146,7 +167,7 @@
                     <button class="video-share">Share</button>
                     <button class="video-save">Save</button>
                 </div>
-                <div class="video-tags-genres">
+                <div class="video-tags">
                     <button>Sports</button>
                     <button>Messi</button>
                     <button>Soccer</button>
