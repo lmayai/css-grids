@@ -62,7 +62,24 @@
             }
             .video-info{
                 grid-area:video-info;
-                border: 2px solid green; 
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding-left: 20px; 
+                padding-right: 80px; 
+            }
+            .video-name,.video-views{
+                width: 100%;
+                margin: 0;
+            }
+            .video-name{
+                margin-top: 5px;
+                font-weight: bold;
+                font-size: 1.5em;
+            }
+            .video-views{
+                font-style: italic;
+                color: rgba(0, 0, 0, 0.6)
             }
             .comments{
                 grid-area: comments;
@@ -93,22 +110,29 @@
                 <h4>Friends Playlist</h4>
                 <ul>
                     <li><img src="faces/face1.png" alt="Friend1"> <p>Pepito Peréz</p></li>
-                    <li><img src="faces/face2.png" alt="Friend1"> <p>Pepito Peréz</p></li>
-                    <li><img src="faces/face3.png" alt="Friend1"> <p>Pepito Peréz</p></li>
-                    <li><img src="faces/face4.png" alt="Friend1"> <p>Pepito Peréz</p></li>
+                    <li><img src="faces/face2.png" alt="Friend1"> <p>Peren Sejo</p></li>
+                    <li><img src="faces/face3.png" alt="Friend1"> <p>Tom Ate</p></li>
+                    <li><img src="faces/face4.png" alt="Friend1"> <p>Cin Thia</p></li>
                 </ul>
             </div>
             <div class="video">
                     <iframe src="https://www.youtube.com/embed/UJfTjeTXvT4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="video-info">
-                <div class="video-name"></div>
-                <div class="video-views"></div>
-                <div class="video-add"></div>
-                <div class="video-share"></div>
-                <div class="video-save"></div>
-                <div class="video-tags-genres"></div>
-            </div>
+                <p class="video-name">Gatorade by Leo Messi</p>
+                <p class="video-views">1'020.200 views</p>
+                <div class="video-actions">
+                    <button class="video-add">Add</button>
+                    <button class="video-share">Share</button>
+                    <button class="video-save">Save</button>
+                </div>
+                <div class="video-tags-genres">
+                    <button>Sports</button>
+                    <button>Messi</button>
+                    <button>Soccer</button>
+                    <button>Entertainment</button>
+                </div>
+            </div><hr>
             <div class="comments">
                 <div class="comment">
                     <div class="user">Pepito Perez</div>
