@@ -28,6 +28,7 @@
             background: #1E1B35;
             color: white;
             padding: 20px;
+            height: 100%;
         }
 
         .playlist li {
@@ -160,6 +161,7 @@
         .comments {
             grid-area: comments;
             padding: 0 20px;
+            height: auto;
         }
 
         .comments-input{
@@ -173,10 +175,11 @@
             min-height: 50px;
             height: auto;
             display: grid;
-            grid-template: 1fr 1fr / 80px 1fr;
+            grid-template: 50px 1fr / 80px 1fr;
             grid-template-areas: "user-img user-name"
                                  "user-img user-comment";
-            align-items: center;
+            align-items: flex-start;
+            margin: 20px 0;
         }
 
         .user-img{
@@ -187,14 +190,12 @@
         }
 
         .user-name{
-            grid-area: user-name;
-            align-self: flex-end;
+            grid-area: user-name;         
         }
 
         .user-comment{
             grid-area: user-comment;
             margin: 0;
-            align-self: flex-start;
             font-style: italic;
         }
 
