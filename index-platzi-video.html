@@ -154,17 +154,53 @@
         .comments-title {
             width: 100%;
             font-weight: 500;
-            /* font-size: 1.3em; */
+            font-size: 1.3em;
         }
 
         .comments {
             grid-area: comments;
-            padding: 20px;
+            padding: 0 20px;
+        }
+
+        .comments-input{
+            border-radius: 10px;
+            border: 0.5px solid rgba(0, 0, 0, 0.2);
+            width: 100%;
+            padding: 10px;
+        }
+
+        .comment{
+            min-height: 50px;
+            height: auto;
+            display: grid;
+            grid-template: 1fr 1fr / 80px 1fr;
+            grid-template-areas: "user-img user-name"
+                                 "user-img user-comment";
+            align-items: center;
+        }
+
+        .user-img{
+            grid-area: user-img;
+            width: 70px;
+            border-radius: 50%;
+            border:2px solid #1E1B35;   
+        }
+
+        .user-name{
+            grid-area: user-name;
+            align-self: flex-end;
+        }
+
+        .user-comment{
+            grid-area: user-comment;
+            margin: 0;
+            align-self: flex-start;
+            font-style: italic;
         }
 
         .suggests {
             grid-area: suggests;
-            padding: 20px;
+            padding:0 20px;
         }
     </style>
 </head>
@@ -223,10 +259,22 @@
         </div>
         <div class="comments">
             <p class="comments-title"> Comments</p>
+            <input class="comments-input" type="text" placeholder="Agrega un comentario...">
             <div class="comment">
-                <p class="user">Pepito Perez
+                <img class="user-img" src="faces/face1.png" alt="">
+                <p class="user-name">Pepito Perez</p>
+                <p class="user-comment">Messi is amazing!</p>
             </div>
-            <p class="user-comment">Pepito Perez
+            <div class="comment">
+                <img class="user-img" src="faces/face2.png" alt="">
+                <p class="user-name">Peren Sejo</p>
+                <p class="user-comment">I don't like this video at all!</p>
+            </div>
+            <div class="comment">
+                <img class="user-img" src="faces/face4.png" alt="">
+                <p class="user-name">Cin Thia</p>
+                <p class="user-comment">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+            </div>
         </div>
         <div class="suggests">
             <p class="suggestions-title"> Suggestions</p>
