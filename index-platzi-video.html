@@ -1,191 +1,240 @@
 <html>
-    <head>
-        <title>PLatzi Video EJM</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-        <style>
-            body{
-                margin: 0;
-                font-family: Lato,sans-serif;
-            }
-            .container{
-                margin: 0 auto;
-                min-height: 100vh;
-                max-height: auto;   
-                display: grid;
-                grid-template-columns: 24% 38% 38%;
-                grid-template-rows: 45% 15% 40%; 
-                grid-template-areas: "playlist video video"
-                                     "playlist video-info video-info"
-                                     "playlist comments suggests";
-            }
-            .playlist{
-                grid-area: playlist;
-                background: #1E1B35;
-                color: white;
-                padding: 20px;
-            }
-            .playlist li{
-                display: flex;
-                margin-bottom: 10px;
-                list-style-type: none;
-                align-items: center;
-                cursor: pointer;
-            }
-            .playlist li p{
-                display: inline-block;
-                margin-left: 5px;
-            }
-            .playlist a{
-                text-decoration: none;
-                color: inherit;
 
-            }
-            .playlist img{
-                width: 70px;
-                border-radius: 50%;
-            }
-            .playlist strong{
-                background: -webkit-linear-gradient(#fd4747, #e6c9d1);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
-            .video{
-                grid-area:video;
-                width: auto;
-            }
-            .video iframe{
-                width: 100%;
-                height: 100%;
-            }
-            .video-info{
-                grid-area:video-info;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                padding-left: 20px; 
-                padding-right: 80px; 
-                border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-                height: auto;
-                
-            }
-            .video-name,.video-views{
-                width: 100%;
-                margin: 0;
-            }
-            .video-name{
-                margin-top: 5px;
-                font-weight: bold;
-                font-size: 1.5em;
-            }
-            .video-views{
-                font-style: italic;
-                color: rgba(0, 0, 0, 0.7)
-            }
-            .video-actions button{
-                border-radius: 5px;
-                border-style: solid;
-                box-sizing: border-box;
-                width: 80px;
-                height: auto;
-                padding: 5px;
-                color: white;
-                margin: 0 15px;
-                font-size: 1em;
-                cursor: pointer;
-            }
-            .video-add{
-                background: linear-gradient(to right, rgb(236, 50, 50), rgb(190, 23, 177) );
-            }
-            .video-share{
-                background: linear-gradient(to right, rgb(22, 114, 27), rgb(112, 136, 26) );
-            }
-            .video-save{
-                background: linear-gradient(to right, rgb(14, 110, 128), rgb(190, 23, 177) );
-            }
-            .video-tags button{
-                border-style: solid;
-                border-radius:20%;
-                padding: 3px 10px;
-                margin:0 5px;
-                vertical-align: center;
-                color: white;
-            }
-            .video-tags button:nth-child(1){
-                background: purple;
-            }
-            .video-tags button:nth-child(2){
-                background: green;
-            }
-            .video-tags button:nth-child(3){
-                background: blue;
-            }
-            .video-tags button:nth-child(4){
-                background: orangered;
-            }
-            .comments{
-                grid-area: comments;   
-            }
-            .suggests{
-                grid-area:suggests;
-            }
-        </style>
-    </head>
-    <body>  
-        <div class="container">
-            <div class="playlist">
-                <h1>Platzi<strong>Video</strong></h1>
-                <h4>My Playlist</h4>
-                <ol>
-                    <li><a href="#">Reasons to</a></li>
-                    <li><a href="#">Reasons #2</a></li>
-                    <li><a href="#">Reasons #3</a></li>
-                    <li><a href="#">Reasons #4</a></li>
-                    <li><a href="#">Reasons #5</a></li>
-                    <li><a href="#">Reasons #6</a></li>
-                    <li><a href="#">Reasons #7</a></li>
-                    <li><a href="#">Reasons #8</a></li>
-                    <li><a href="#">Reasons #9</a></li>
-                </ol>
-                <h4>Friends Playlist</h4>
-                <ul>
-                    <li><img src="faces/face1.png" alt="Friend1"> <p>Pepito Peréz</p></li>
-                    <li><img src="faces/face2.png" alt="Friend1"> <p>Peren Sejo</p></li>
-                    <li><img src="faces/face3.png" alt="Friend1"> <p>Tom Ate</p></li>
-                    <li><img src="faces/face4.png" alt="Friend1"> <p>Cin Thia</p></li>
-                </ul>
+<head>
+    <title>PLatzi Video EJM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Lato, sans-serif;
+        }
+
+        .container {
+            margin: 0 auto;
+            min-height: 100vh;
+            max-height: auto;
+            display: grid;
+            grid-template-columns: 24% 38% 38%;
+            grid-template-rows: 45% 15% 40%;
+            grid-template-areas: "playlist video video"
+                "playlist video-info video-info"
+                "playlist comments suggests";
+        }
+
+        .playlist {
+            grid-area: playlist;
+            background: #1E1B35;
+            color: white;
+            padding: 20px;
+        }
+
+        .playlist li {
+            display: flex;
+            margin-bottom: 10px;
+            list-style-type: none;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .playlist li p {
+            display: inline-block;
+            margin-left: 5px;
+        }
+
+        .playlist a {
+            text-decoration: none;
+            color: inherit;
+
+        }
+
+        .playlist img {
+            width: 70px;
+            border-radius: 50%;
+            border:2px solid white;
+        }
+
+        .playlist strong {
+            background: -webkit-linear-gradient(#fd4747, #e6c9d1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .video {
+            grid-area: video;
+            width: auto;
+        }
+
+        .video iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-info {
+            grid-area: video-info;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-left: 20px;
+            padding-right: 80px;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+            height: auto;
+
+        }
+
+        .video-name,
+        .video-views {
+            width: 100%;
+            margin: 0;
+        }
+
+        .video-name {
+            margin-top: 5px;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        .video-views {
+            font-style: italic;
+            color: rgba(0, 0, 0, 0.7)
+        }
+
+        .video-actions button {
+            border-radius: 5px;
+            border-style: solid;
+            box-sizing: border-box;
+            width: 80px;
+            height: auto;
+            padding: 5px;
+            color: white;
+            margin: 0 15px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .video-add {
+            background: linear-gradient(to right, rgb(236, 50, 50), rgb(190, 23, 177));
+        }
+
+        .video-share {
+            background: linear-gradient(to right, rgb(22, 114, 27), rgb(112, 136, 26));
+        }
+
+        .video-save {
+            background: linear-gradient(to right, rgb(14, 110, 128), rgb(190, 23, 177));
+        }
+
+        .video-tags button {
+            border-style: solid;
+            border-radius: 20%;
+            padding: 3px 10px;
+            margin: 0 5px;
+            vertical-align: center;
+            color: white;
+        }
+
+        .video-tags button:nth-child(1) {
+            background: purple;
+        }
+
+        .video-tags button:nth-child(2) {
+            background: green;
+        }
+
+        .video-tags button:nth-child(3) {
+            background: blue;
+        }
+
+        .video-tags button:nth-child(4) {
+            background: orangered;
+        }
+
+        .suggestions-title,
+        .comments-title {
+            width: 100%;
+            font-weight: 500;
+            /* font-size: 1.3em; */
+        }
+
+        .comments {
+            grid-area: comments;
+            padding: 20px;
+        }
+
+        .suggests {
+            grid-area: suggests;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="playlist">
+            <h1>Platzi<strong>Video</strong></h1>
+            <h4>My Playlist</h4>
+            <ol>
+                <li><a href="#">Reasons to</a></li>
+                <li><a href="#">Reasons #2</a></li>
+                <li><a href="#">Reasons #3</a></li>
+                <li><a href="#">Reasons #4</a></li>
+                <li><a href="#">Reasons #5</a></li>
+                <li><a href="#">Reasons #6</a></li>
+                <li><a href="#">Reasons #7</a></li>
+                <li><a href="#">Reasons #8</a></li>
+                <li><a href="#">Reasons #9</a></li>
+            </ol>
+            <h4>Friends Playlist</h4>
+            <ul>
+                <li><img src="faces/face1.png" alt="Friend1">
+                    <p>Pepito Peréz</p>
+                </li>
+                <li><img src="faces/face2.png" alt="Friend1">
+                    <p>Peren Sejo</p>
+                </li>
+                <li><img src="faces/face3.png" alt="Friend1">
+                    <p>Tom Ate</p>
+                </li>
+                <li><img src="faces/face4.png" alt="Friend1">
+                    <p>Cin Thia</p>
+                </li>
+            </ul>
+        </div>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/UJfTjeTXvT4" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+            <p class="video-name">Gatorade by Leo Messi</p>
+            <p class="video-views">1'020.200 views</p>
+            <div class="video-actions">
+                <button class="video-add">Add</button>
+                <button class="video-share">Share</button>
+                <button class="video-save">Save</button>
             </div>
-            <div class="video">
-                    <iframe src="https://www.youtube.com/embed/UJfTjeTXvT4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="video-info">
-                <p class="video-name">Gatorade by Leo Messi</p>
-                <p class="video-views">1'020.200 views</p>
-                <div class="video-actions">
-                    <button class="video-add">Add</button>
-                    <button class="video-share">Share</button>
-                    <button class="video-save">Save</button>
-                </div>
-                <div class="video-tags">
-                    <button>Sports</button>
-                    <button>Messi</button>
-                    <button>Soccer</button>
-                    <button>Entertainment</button>
-                </div>
-            </div><hr>
-            <div class="comments">
-                <div class="comment">
-                    <div class="user">Pepito Perez</div>
-                </div>
-            </div>
-            <div class="suggests">
-                <div class="suggestions-title"></div>
-                <div class="suggestion">
-                    <img src="" alt="">
-                    <div class="suggestion-title"></div>
-                </div>
+            <div class="video-tags">
+                <button>Sports</button>
+                <button>Messi</button>
+                <button>Soccer</button>
+                <button>Entertainment</button>
             </div>
         </div>
-    </body>
+        <div class="comments">
+            <p class="comments-title"> Comments</p>
+            <div class="comment">
+                <p class="user">Pepito Perez
+            </div>
+            <p class="user-comment">Pepito Perez
+        </div>
+        <div class="suggests">
+            <p class="suggestions-title"> Suggestions</p>
+            <div class="suggestion">
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
